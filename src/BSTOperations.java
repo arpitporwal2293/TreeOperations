@@ -87,6 +87,36 @@ public class BSTOperations {
 		}
 	}
 	
+	public static void printPath(int[] path,int pathLen){
+		for(int i=0;i<pathLen;i++){
+			System.out.print(path[i]);
+		}
+		System.out.println();
+	}
+	
+	public static void printPathSum(int[] path,int pathLen){
+		int sum=0;
+		for(int i=0;i<pathLen;i++){
+			sum+=path[i];
+		}
+		System.out.println(sum);
+	}
+	
+	public static void rootToLeafPath(BSTNode root,int[] path,int pathLen){
+		if(root==null){
+			return;
+		}
+		path[pathLen] = root.data;
+		pathLen++;
+		if(root.left==null && root.right==null){
+			printPath(path, pathLen);
+			printPathSum(path, pathLen);
+		}else{
+			rootToLeafPath(root.left, path, pathLen);
+			rootToLeafPath(root.right, path, pathLen);
+		}
+	}
+	
 	public static void main(String[] args) {
 			//BinarySearchTree
 			BSTNode bstNode = BSTNode.insert(null, 7);
@@ -108,6 +138,8 @@ public class BSTOperations {
 			System.out.println();
 			int count = countNodesInRange(bstNode, 7, 10);
 			System.out.println(count);
+			int[] arr = new int[100];
+			rootToLeafPath(bstNode, arr, 0);
 	}
 
 }
