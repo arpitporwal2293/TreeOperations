@@ -29,6 +29,7 @@ public class TreeOperations {
 		Node newNode = new Node();
 		newNode.data = 8;
 		PrintNodesAtKDistanceFromTarget.printNodesAtKDistance(root, newNode, 1);
+		System.out.println();
 	}
 	
 }

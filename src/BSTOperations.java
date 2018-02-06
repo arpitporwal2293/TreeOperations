@@ -28,6 +28,8 @@ public class BSTOperations {
 			BSTNode newNode = new BSTNode();
 			newNode.data = 8;
 			BSTPrintNodesAtKDistanceFromTarget.printNodesAtKDistance(bstNode, newNode, 1);
+			System.out.println();
+			System.out.println(CheckIfBST.checkIfBST(bstNode));
 	}
 
 }
