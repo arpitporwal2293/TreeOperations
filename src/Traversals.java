@@ -59,4 +59,22 @@ public class Traversals {
 		}
 	}
 	
+	public static void reverselevelOrder(Node root,int level){
+		if(root==null)
+			return;
+		if(level==1){
+			System.out.print(root.data);
+		}else{
+			reverselevelOrder(root.right, level-1);
+			reverselevelOrder(root.left, level-1);
+		}
+	}
+	
+	public static void reverseLevelOrderTraversal(Node root){
+		int h = findHeight(root);
+		for(int i=h;i>=0;i--){
+			reverselevelOrder(root,i);
+		}
+	}
+	
 }

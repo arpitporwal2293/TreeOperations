@@ -23,6 +23,12 @@ public class TreeOperations {
 		System.out.println();
 		Traversals.levelOrderTraversal(root);
 		System.out.println();
+		Traversals.reverseLevelOrderTraversal(root);
+		System.out.println();
+		TraversalsQueue.levelOrder(root);
+		System.out.println();
+		TraversalsQueue.reverseLevelOrder(root);
+		System.out.println();
 		int[] arr = new int[100];
 		RootToLeafPathAndSum.rootToLeafPath(root, arr, 0);
 		System.out.println();
@@ -30,6 +36,8 @@ public class TreeOperations {
 		newNode.data = 8;
 		PrintNodesAtKDistanceFromTarget.printNodesAtKDistance(root, newNode, 1);
 		System.out.println();
+		
+		
 	}
 	
 }
