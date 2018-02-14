@@ -25,6 +25,8 @@ public class TreeOperations {
 		System.out.println();
 		Traversals.reverseLevelOrderTraversal(root);
 		System.out.println();
+		Traversals.spiralLevelOrderTraversal(root);
+		System.out.println();
 		TraversalsQueue.levelOrder(root);
 		System.out.println();
 		TraversalsQueue.reverseLevelOrder(root);
